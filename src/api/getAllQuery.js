@@ -1,9 +1,9 @@
 import { client, q } from '../config/db'
 
-const getAllNotes = client.query(
+const getAllQuery = client.query(
   q.Paginate(
     q.Match(
-      q.Ref('indexes/notes')))
+      q.Ref('indexes/all_notes')))
 )
   .then((response) => {
     const productRefs = response.data
@@ -17,4 +17,4 @@ const getAllNotes = client.query(
   })
   .catch((error) => console.log('error', error.message))
 
-export default getAllNotes;
+export default getAllQuery;

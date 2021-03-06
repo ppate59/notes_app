@@ -1,6 +1,6 @@
-import getAllNotes from './getAllNotes'
-import createNote from './createNote'
-import deleteNote from './deleteNote'
-import editNote from './editNote';
+import getAllQuery from './getAllQuery'
+import createQuery from './createQuery'
+import deleteQuery from './deleteQuery'
+import editQuery from './editQuery';
 
-export { getAllNotes, createNote, deleteNote, editNote}
+export { getAllQuery, createQuery, deleteQuery, editQuery}

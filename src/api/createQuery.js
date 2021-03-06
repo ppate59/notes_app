@@ -1,11 +1,12 @@
 import { client, q } from '../config/db'
 
-const createNote = text => client.query(
+const createQuery = (title,description) => client.query(
   q.Create(
     q.Collection('notes'),
     {
       data: {
-        text,
+        title: title,
+        description: description
       },
     },
   )
@@ -14,4 +15,4 @@ const createNote = text => client.query(
 .catch(err => console.warn(err))
 
 
-export default createNote
+export default createQuery
